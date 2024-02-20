@@ -1,9 +1,20 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+# secret sonar_token = sqp_8f36f4d7324aa521ba6aa772cf44ee9d864e5aa6
 # dependencies
 /node_modules
 /.pnp
 .pnp.js
+
+# Terraform files
+Eks-terraform/.terraform.lock.hcl
+Eks-terraform/.terraform/providers/registry.terraform.io/hashicorp/aws/5.37.0/linux_amd64/terraform-provider-aws_v5.37.0_x5
+Eks-terraform/.terraform/terraform.tfstate
+
+
+.terraform/
+terraform.tfstate*
+terraform-provider-aws*
 
 # testing
 /coverage
@@ -21,3 +32,4 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+~                
