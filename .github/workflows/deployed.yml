@@ -39,6 +39,7 @@ jobs:
 
       - name: Image scan
         run: trivy image kunalbarot3188/tic-tac-toe-kunal:v1  > trivyimagescan.txt
+# added comment to kickoff the flow
 
   deploy:
    needs: build-analyze-scan
