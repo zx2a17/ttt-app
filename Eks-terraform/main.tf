@@ -94,7 +94,11 @@ resource "aws_eks_node_group" "example" {
   node_group_name = "Node-cloud"
   node_role_arn   = aws_iam_role.example1.arn
   subnet_ids      = data.aws_subnets.public.ids
+<<<<<<< HEAD
   #availability_zones = ["us-east-1b", "us-east-1c", "us-east-1a"]  # Specify an available availability zone
+=======
+  #availability_zones = ["us-east-1b", "us-east-1c", "us-east-1a"]  # Specify an available availability zone ### didn't work
+>>>>>>> origin/main
 
   scaling_config {
     desired_size = 1
