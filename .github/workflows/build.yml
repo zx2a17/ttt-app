@@ -22,9 +22,8 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
 
-      - name: Dependencies install using npm
-        run: |
-         npm install
+      - name: npm install dependency
+        run: apt install npm
 
       - name: Trivy file scan
         run: trivy fs . > trivyfilescan.txt
@@ -40,17 +39,3 @@ jobs:
 
       - name: Image scan
         run: trivy image kunalbarot3188/tic-tac-toe-kunal:v1  > trivyimagescan.txt
-
-
-  deploy:
-   needs: build
-   runs-on: [self-hosted]
-   steps:
-      - name: docker pull image
-        run: docker pull kunalbarot3188/tic-tac-toe-kunal:v1
-
-      - name: Image scan
-        run: trivy image kunalbarot3188/tic-tac-toe-kunal:v1 > trivyimagedeploy.txt
-
-      - name: Deploy to container
-        run: docker run -d --name game -p 3000:3000 kunalbarot3188/tic-tac-toe-kunal:v1
