@@ -52,3 +52,10 @@ jobs:
 
       - name: Deploy to container
         run: docker run -d --name game -p 3000:3000 zx2a17/ttt-app:v1
+
+      - name: Update kubeconfig
+        run: aws eks --region us-east-1 update-kubeconfig --name EKS_CLOUD
+
+      - name: Deploy to kubernetes
+        run: kubectl apply -f deployment-service.yml
+
