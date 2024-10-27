@@ -38,4 +38,4 @@ jobs:
           DOCKER_CLI_ACI: 1
 
       - name: Image scan
-        run: trivy image kunalbarot3188/tic-tac-toe-kunal:v1  > trivyimagescan.txt
+        run: trivy image zx2a17/ttt-app:v1  > trivyimagescan.txt
