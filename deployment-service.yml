@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: tic-tac-toe
-        image: zx2a17/ttt-app:latest
+        image: zx2a17/ttt-app:v1
         ports:
         - containerPort: 3000   # Use port 3000
 
