@@ -50,6 +50,11 @@ jobs:
       - name: Image scan
         run: trivy image zx2a17/ttt-app:v1 > trivyimagedeploy.txt
 
+      - name: docker clean up
+        run: |
+          docker stop game
+          docker rm game
+
       - name: Deploy to container
         run: docker run -d --name game -p 3000:3000 zx2a17/ttt-app:v1
 
