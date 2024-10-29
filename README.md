@@ -19,7 +19,8 @@ https://medium.com/@kunalbarot3188/deploying-tic-tac-toe-game-ci-cd-on-githubact
 2) Create a new bucket for the terraform state as backend
 
 3) install the following on the master server 
-   #!/bin/bash
+```
+#!/bin/bash
 # install docker
 sudo apt update -y
 sudo apt install docker.io -y
@@ -73,7 +74,7 @@ echo "deb [signed-by=/usr/share/keyrings/nodesource-archive-keyring.gpg] https:/
 sudo apt update
 sudo apt install -y nodejs
 
-
+```
 4) verify all installed correctly
    docker --version
 trivy --version
