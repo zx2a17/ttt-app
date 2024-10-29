@@ -97,4 +97,6 @@ sonar.projectKey=<Your - key - shown>
 9) clone the repo (this one)
 10) terraform init and apply
 11) then merging to main should run the github action and it should deploy everything
-12) access the app via the LoadBalancer!
+12) run kubectl get all to get the port open on the ELB and open it to accept traffice to access the app!
+13) access the app via the LoadBalancer with the external IP output of the command above
+   a74a209fdffea4d7b8e773212a9809d7-1738975369.us-east-1.elb.amazonaws.com
