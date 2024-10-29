@@ -1,5 +1,8 @@
 <h1 align="center">TIC-TAC-TOE-GAME</h1>
 
+source
+https://medium.com/@kunalbarot3188/deploying-tic-tac-toe-game-ci-cd-on-githubactions-and-amazon-eks-448e4e6b060d
+
 1) Create a master server t2 medium and 20GB storage with
    a) Admin IAM role
    b) security group set up to have the following open:
