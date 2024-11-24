@@ -1,6 +1,6 @@
 # you can find the deploy.yml file in the other folder named successfuldeployfile. named sucessfuldeployedfile.yml
 
-name: Build,Analyze,scan
+name: StopGame
 
 on:
   push:
