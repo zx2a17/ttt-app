@@ -76,15 +76,18 @@ sudo apt install -y nodejs
 
 ```
 4) verify all installed correctly
-   docker --version
+
+```
+docker --version
 trivy --version
 terraform --version
 aws --version
 kubectl version
 node -v
 java --version
+```
 
-5) Login to Sonar Dashboard
+6) Login to Sonar Dashboard
 Load on Browser using the <ec2-public-ip:9000>
 username ==> admin
 password ==> admin
@@ -92,10 +95,13 @@ password ==> admin
 set up project and configure Snoar creds on github secrets
 Copy the token generated here for the SONAR_TOKEN and SONAR_URL to the secret 
 
-6) Add Docker login token as well for the docker access. (your own account)
+7) Add Docker login token as well for the docker access. (your own account)
+   - note here that the source code has been pushed to docker hub and stored there already.
+   - at this point you can run initial sonarqube analysis already.
 
-7) # Add the sonar-project.properties in it
+8) # Add the sonar-project.properties in it
 sonar.projectKey=<Your - key - shown>
+This will be the project key within the sonar instance
 
 8) run the self-runner instructions on github, so that githup action commands will apply to the master server
 9) clone the repo (this one)
