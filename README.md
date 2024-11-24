@@ -1,5 +1,8 @@
 <h1 align="center">TIC-TAC-TOE-GAME</h1>
 
+![Screenshot 2024-11-25 102833](https://github.com/user-attachments/assets/b7cae5c0-070d-47a0-9ca9-87f812a8dd4d)
+
+
 source
 https://medium.com/@kunalbarot3188/deploying-tic-tac-toe-game-ci-cd-on-githubactions-and-amazon-eks-448e4e6b060d
 
