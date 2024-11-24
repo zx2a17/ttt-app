@@ -99,14 +99,15 @@ Copy the token generated here for the SONAR_TOKEN and SONAR_URL to the secret
    - note here that the source code has been pushed to docker hub and stored there already.
    - at this point you can run initial sonarqube analysis already.
 
-8) # Add the sonar-project.properties in it
+8) Add the sonar-project.properties in it
 sonar.projectKey=<Your - key - shown>
-This will be the project key within the sonar instance
+This will be the project key within the sonar instance (it shoudl be part of the instruction)
+After adding this one, then SonarQube is now ready to scan the content of the github repo and the code within it.
 
-8) run the self-runner instructions on github, so that githup action commands will apply to the master server
-9) clone the repo (this one)
-10) terraform init and apply
-11) then merging to main should run the github action and it should deploy everything
-12) run kubectl get all to get the port open on the ELB and open it to accept traffice to access the app!
-13) access the app via the LoadBalancer with the external IP output of the command above
+9) run the self-runner instructions on github, so that github action commands will apply to the master server.
+10) clone the repo (this one)
+11) terraform init and apply
+12) then merging to main should run the github action and it should deploy everything
+13) run kubectl get all to get the port open on the ELB and open it to accept traffice to access the app!
+14) access the app via the LoadBalancer with the external IP output of the command above
    a74a209fdffea4d7b8e773212a9809d7-1738975369.us-east-1.elb.amazonaws.com
