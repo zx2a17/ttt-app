@@ -108,9 +108,9 @@ This will be the project key within the sonar instance (it shoudl be part of the
 After adding this one, then SonarQube is now ready to scan the content of the github repo and the code within it.
 
 9) run the self-runner instructions on github, so that github action commands will apply to the master server.
-10) clone the repo (this one)
-11) terraform init and apply
-12) then merging to main should run the github action and it should deploy everything
+10) clone the repo (this one) onto the sonarqube master server - then give this server IAM role (this will allow terraform to use s3 as backend and provision resources)
+11) cd into the terraform folder - terraform init and apply
+12) then *merging to main* should run the github action and it should deploy everything
 13) run kubectl get all to get the port open on the ELB and open it to accept traffice to access the app!
 14) access the app via the LoadBalancer with the external IP output of the command above
    a74a209fdffea4d7b8e773212a9809d7-1738975369.us-east-1.elb.amazonaws.com
