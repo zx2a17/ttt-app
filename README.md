@@ -9,6 +9,7 @@ https://medium.com/@kunalbarot3188/deploying-tic-tac-toe-game-ci-cd-on-githubact
 1) Create a master server t2 medium and 20GB storage with
    a) Admin IAM role
    b) security group set up to have the following open:
+   ```
      3000 (for app to run)
      9000 (for Sonarqube dashboard)
      22, 443, 80
@@ -18,10 +19,20 @@ https://medium.com/@kunalbarot3188/deploying-tic-tac-toe-game-ci-cd-on-githubact
      8080
      5000
      8000
+   ```
 
-2) Create a new bucket for the terraform state as backend
+3) Create a new bucket for the terraform state as backend
 
-3) install the following on the master server 
+4) install the following on the master server by creating a script
+
+Create a new script file using a text editor, such as nano, give the file execution rights and then execute:
+
+```
+nano install_java.sh
+chmod +x install_java.sh
+./install_java.sh
+```
+
 ```
 #!/bin/bash
 # install docker
