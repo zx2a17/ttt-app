@@ -3,9 +3,6 @@
 ![Screenshot 2024-11-25 102833](https://github.com/user-attachments/assets/b7cae5c0-070d-47a0-9ca9-87f812a8dd4d)
 
 
-source
-https://medium.com/@kunalbarot3188/deploying-tic-tac-toe-game-ci-cd-on-githubactions-and-amazon-eks-448e4e6b060d
-
 1) Create a master server t2 medium and 20GB storage with
    a) Admin IAM role
    b) security group set up to have the following open:
@@ -122,6 +119,11 @@ After adding this one, then SonarQube is now ready to scan the content of the gi
 10) clone the repo (this one) onto the sonarqube master server - then give this server IAM role (this will allow terraform to use s3 as backend and provision resources)
 11) cd into the terraform folder - terraform init and apply
 12) then *merging to main* should run the github action and it should deploy everything
-13) run kubectl get all to get the port open on the ELB and open it to accept traffice to access the app!
+13) run ```kubectl get all``` to get the port open on the ELB and open it to accept traffice to access the app!
 14) access the app via the LoadBalancer with the external IP output of the command above
    a74a209fdffea4d7b8e773212a9809d7-1738975369.us-east-1.elb.amazonaws.com
+
+
+Credits:
+source
+https://medium.com/@kunalbarot3188/deploying-tic-tac-toe-game-ci-cd-on-githubactions-and-amazon-eks-448e4e6b060d
